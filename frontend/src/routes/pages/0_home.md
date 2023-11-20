@@ -5,10 +5,10 @@ icon: Briefcase
 ---
 
 <script>
-  import Home from '../home/+page.svelte';
+  import Onboard from '../onboard/+page.svelte';
   import { Img, Heading, P } from 'flowbite-svelte'
 </script>
 
-<Home />
+<Onboard />
 
 

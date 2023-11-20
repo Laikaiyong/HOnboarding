@@ -3,54 +3,80 @@
     import { Range, Label } from 'flowbite-svelte';
     import { Dropdown, DropdownItem } from 'flowbite-svelte';
     import { ChevronDownSolid } from 'flowbite-svelte-icons';
+    import { Radio } from 'flowbite-svelte';
+    import { P, Layout } from 'flowbite-svelte';
+
+    // TODO // import Messenger_logo from '$../../lib/images/Messenger-logo.webp';
+
+    let minmaxValue = 5;
+
+    let snsIntegrationList = [
+		{ id: '0', name: 'Messenger', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/2048px-Facebook_Messenger_logo_2020.svg.png' },
+		{ id: '1', name: 'Whatsapp', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/2048px-Facebook_Messenger_logo_2020.svg.png'},
+		{ id: '2', name: 'Telegram', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/2048px-Facebook_Messenger_logo_2020.svg.png' },
+        { id: '3', name: 'Instagram', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/2048px-Facebook_Messenger_logo_2020.svg.png'}
+	];
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Chatbot</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
-<div>
-    <h1>Chatbot</h1>
-    <p>Empower Your Customer Interactions with Personalized</p>
-    <div class="m-8">
-        <div class="flex flex-row items-center">
+
+<div class="m-2">
+    <h1 class='text-4xl font-bold pt-1 pb-0 dark:text-white'>Chatbot</h1>
+    <h4 class='text-lg font-normal pt-0 pb-3 dark:text-white'>Empower Your Customer Interactions with a Personalized Chatbot</h4>
+    <div class='border-2 py-2 px-4 rounded-lg'>
+        <div class="flex flex-row items-center content-center">
             <div>
-                <h3 class="my-4">Customer Chatbot Integrations</h3>
+                <h3 class='pt-2 pb-3 dark:text-white'>Customer Chatbot Integrations</h3>
+                
             </div>
-            <div class="px-4 pt-2">
-                <Button color="light"/>
-                <Tooltip>Tooltip content</Tooltip>
+            <div class="px-4">
+                <button>
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm0 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm1-5.034V12a1 1 0 0 1-2 0v-1.418a1 1 0 0 1 1.038-.999 1.436 1.436 0 0 0 1.488-1.441 1.501 1.501 0 1 0-3-.116.986.986 0 0 1-1.037.961 1 1 0 0 1-.96-1.037A3.5 3.5 0 1 1 11 11.466Z"/>
+                    </svg>
+                </button>
+                <Tooltip>Tooltip content placeholder</Tooltip>
             </div>
         </div>
+        {#each snsIntegrationList as { name, src }}
         <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" value="" class="sr-only peer">
-            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-            <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
+            <!-- <picture class="h-8 mb-3 align-middle">
+			<source srcset={Messenger_logo} type="image/webp" />
+			<img src={Messenger_logo} class="h-8 mb-3 mx-3 mt-1"  alt="HOnboarding Logo"/>
+		   </picture> -->
+            <img class="h-10 pr-2" src={src} alt={name}/>
+            <label class="relative inline-flex items-center cursor-pointer pr-6">
+                <!-- <img src={messengerLogo} alt="messenger" class='h-24'/> -->
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+            </label>
         </label>
-        <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" value="" class="sr-only peer">
-            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-            <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
-        </label>
-        <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" value="" class="sr-only peer">
-            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-            <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
-        </label>
+        {/each}
     </div>
 </div>
 <div>
-    <Button>Dropdown button<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
-<Dropdown>
-  <DropdownItem>Marketing Personnel</DropdownItem>
-  <DropdownItem>Technical Advisor</DropdownItem>
-  <DropdownItem>Legal Advisor</DropdownItem>
-  <DropdownItem>Apa lagi</DropdownItem>
-</Dropdown>
+    <Label>Conversation Style</Label>
+<Range id="range-minmax" min="0" max="10" bind:value={minmaxValue} />
+<p class="dark:text-white">Value: {minmaxValue}</p>
+
+    <Button>Chatbot Role<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
+    <Dropdown>
+     <DropdownItem>Marketing Personnel</DropdownItem>
+     <DropdownItem>Technical Advisor</DropdownItem>
+     <DropdownItem>Legal Advisor</DropdownItem>
+     <DropdownItem>HR Manager</DropdownItem>
+    </Dropdown>
+
+    <p class="mb-4 pt-5 font-semibold text-gray-900 dark:text-white">Output</p>
+    <ul class="items-center w-full rounded-lg border border-gray-200 sm:flex dark:bg-gray-800 dark:border-gray-600 divide-x divide-gray-200 dark:divide-gray-600">
+    <li class="w-full"><Radio name="hor-list" class="p-3">PDF</Radio></li>
+    <li class="w-full"><Radio name="hor-list" class="p-3">Image</Radio></li>
+    <li class="w-full"><Radio name="hor-list" class="p-3">Text</Radio></li>
+</ul>
 </div>
-<div>
-    <Label>Default range</Label>
-    <Range id="default-range" size="md" /></div>>
 <div>
 
     <form>
