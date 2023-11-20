@@ -1,20 +1,61 @@
+<script lang="ts">
+    import { Tooltip, Button } from 'flowbite-svelte';
+    import { Range, Label } from 'flowbite-svelte';
+    import { Dropdown, DropdownItem } from 'flowbite-svelte';
+    import { ChevronDownSolid } from 'flowbite-svelte-icons';
+</script>
+
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
-
-
 <div>
-
-    <form>
+    <h1>Chatbot</h1>
+    <p>Empower Your Customer Interactions with Personalized</p>
+    <div class="m-8">
+        <div class="flex flex-row items-center">
+            <div>
+                <h3 class="my-4">Customer Chatbot Integrations</h3>
+            </div>
+            <div class="px-4 pt-2">
+                <Button color="light"/>
+                <Tooltip>Tooltip content</Tooltip>
+            </div>
+        </div>
         <label class="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" value="" class="sr-only peer">
             <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
             <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
         </label>
-      
+        <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" value="" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+            <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
+        </label>
+        <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" value="" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+            <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
+        </label>
+    </div>
+</div>
+<div>
+    <Button>Dropdown button<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
+<Dropdown>
+  <DropdownItem>Marketing Personnel</DropdownItem>
+  <DropdownItem>Technical Advisor</DropdownItem>
+  <DropdownItem>Legal Advisor</DropdownItem>
+  <DropdownItem>Apa lagi</DropdownItem>
+</Dropdown>
+</div>
+<div>
+    <Label>Default range</Label>
+    <Range id="default-range" size="md" /></div>>
+<div>
+
+    <form>
         <label for="chat" class="sr-only">Your message</label>
-        <div class="flex items-center px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-700">
+        <div class="w-3/4 mx-8 my-8 flex items-center px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-700">
             <button type="button" class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
                     <path fill="currentColor" d="M13 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0ZM7.565 7.423 4.5 14h11.518l-2.516-3.71L11 13 7.565 7.423Z"/>

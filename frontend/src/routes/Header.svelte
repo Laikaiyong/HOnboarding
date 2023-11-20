@@ -1,11 +1,10 @@
-<script>
-	import { page } from '$app/stores';
-	import logo from '$lib/images/honboarding-logo.webp';
-	import github from '$lib/images/github.svg';
-	import logoFallback from '$lib/images/honboarding-logo.png';
-</script>
+<!-- <script>
 
+	let spanClass = 'flex-1 ml-3 whitespace-nowrap';
+	$: activeUrl = $page.url.pathname;
+</script> -->
 
+<!-- 
 <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
 	<div class="px-3 py-3 lg:px-5 lg:pl-3">
 	  <div class="flex items-center justify-between">
@@ -16,6 +15,7 @@
 				 <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
 			  </svg>
 		   </button>
+		   <DarkMode class='text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2' />
 		   <picture class="h-8 mb-3 align-middle">
 			<source srcset={logo} type="image/webp" />
 			<img src={logoFallback} class="h-8 mb-3 mx-3 mt-1"  alt="HOnboarding Logo"/>
@@ -60,6 +60,19 @@
 	</div>
   </nav>
   
+  <Sidebar>
+	<SidebarWrapper>
+		<SidebarGroup>
+			<SidebarItem label="Dashboard" href="/">
+				<svelte:fragment slot="icon">
+				<ChartPieSolid class="w-5 h-5" />
+				</svelte:fragment>
+      		</SidebarItem>
+		</SidebarGroup>
+	</SidebarWrapper>
+  </Sidebar>
+
+
   <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
 	 <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
 		<ul class="space-y-2 font-medium">
@@ -116,8 +129,10 @@
 				<span class="flex-1 ms-3 whitespace-nowrap">Sverdle</span>
 			 </a>
 			</li> -->
-		</ul>
-		<ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
+		<!--
+</ul>
+		-->
+		<!--<ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
 			<h1 class="text-left text-gray-900 transition duration-75 rounded-lg dark:text-white">Space</h1>
 			<li>
 			   <a href="space/gallery" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
@@ -163,7 +178,9 @@
 			</li>
 		 </ul>
 	 </div>
-  </aside>
+  </aside> -->
+
+
   
 <!-- 
 	<nav>

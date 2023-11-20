@@ -1,0 +1,41 @@
+{
+    "autoLoad": true,
+    "compass": false,
+    "default": {
+        "firstScene": "office",
+        "sceneFadeDuration": 1000
+    },
+    "scenes": {
+        "office": {
+            "hfov": 180,
+            "pitch": 0,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/aptus/image/upload/v1550825644/trapboveneinde_dvoxir.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 4,
+                    "yaw": 21.8,
+                    "type": "scene",
+                    "sceneId": "meetingroom"
+                }
+            ]
+        },
+        "meetingroom": {
+            "hfov": 180,
+            "pitch": 0,
+            "yaw": 90,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/aptus/image/upload/v1550826131/vergaderzaal_sq7baz.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 8,
+                    "yaw": -58,
+                    "type": "scene",
+                    "sceneId": "office"
+                }
+            ]
+        }
+      
+    }
+}
