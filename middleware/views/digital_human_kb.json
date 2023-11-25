@@ -1,0 +1,26 @@
+[
+  {
+    "category": "Employee Benefits",
+    "url": "http://localhost:5173/spaces/gallery",
+    "description": "Access comprehensive procedures and guidelines for applying and claiming various types of employee leave, including medical leave, vacation leave, and other forms of paid time off. Learn about the process to request, approve, and manage leave entitlements. Understand the necessary documentation and steps required to submit a leave claim. Explore additional benefits-related information such as health insurance coverage, retirement plans, and wellness programs.",
+    "voice_text": "Check out our knowledge base for Employee Benefits that includes comprehensive procedures for different types of leave, like medical and vacation leave. It helps you understand how to request and manage leave, along with necessary documentation. Additionally, explore details on health insurance, retirement plans, and wellness programs."
+  },
+  {
+    "category": "Employee Benefits",
+    "url": "http://localhost:5173/spaces/gallery",
+    "description": "Access comprehensive procedures and guidelines for applying and claiming various types of employee leave, including medical leave, vacation leave, and other forms of paid time off. Learn about the process to request, approve, and manage leave entitlements. Understand the necessary documentation and steps required to submit a leave claim. Explore additional benefits-related information such as health insurance coverage, retirement plans, and wellness programs.",
+    "voice_text": "Check out our knowledge base for Employee Benefits that includes comprehensive procedures for different types of leave, like medical and vacation leave. It helps you understand how to request and manage leave, along with necessary documentation. Additionally, explore details on health insurance, retirement plans, and wellness programs."
+  },
+  {
+    "category": "Performance Expectations",
+    "url": "http://localhost:5173/spaces/gallery",
+    "description": "Discover the key performance indicators (KPIs) relevant to different roles within the organization. Learn about the metrics used to evaluate performance and understand the expectations for meeting and exceeding these standards. Access resources and guidelines for performance reviews and goal-setting processes.",
+    "voice_text": "Check out our knowledge base for Performance Expectations where you can discover KPIs and metrics for evaluating performance in various roles. Understand the expectations for meeting and exceeding standards and access resources for performance reviews and goal-setting."
+  },
+  {
+    "category": "Training and Development",
+    "url": "http://localhost:5173/spaces/gallery",
+    "description": "Explore a range of training programs and opportunities aimed at enhancing professional development within the company. Gain access to workshops, online courses, mentorship programs, and skill-building sessions. Discover resources for continuous learning to support career growth and advancement.",
+    "voice_text": "Check out our knowledge base for Training and Development to explore a variety of programs aimed at enhancing professional development. Gain access to workshops, online courses, mentorship programs, and resources for continuous learning."
+  }
+]

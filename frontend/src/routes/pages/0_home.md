@@ -1,14 +1,14 @@
 ---
 dir: pages
 title: Home
-icon: Briefcase
+icon: HomeSolid
 ---
 
 <script>
-  import Onboard from '../onboard/+page.svelte';
+  import Home from '../home/+page.svelte';
   import { Img, Heading, P } from 'flowbite-svelte'
 </script>
 
-<Onboard />
+<Home />
 
 

@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Gallery</title>
+	<title>Customer Facing</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
 

@@ -1,6 +1,8 @@
 import { fail } from '@sveltejs/kit';
 import { Game } from './game';
 
+import { OPENAI_API_KEY } from '$env/static/private'
+
 /** @satisfies {import('./$types').PageServerLoad} */
 export const load = ({ cookies }) => {
 	const game = new Game(cookies.get('sverdle'));
